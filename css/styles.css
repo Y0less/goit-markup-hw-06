@@ -48,6 +48,7 @@ h4,
 h5,
 h6,
 p,
+strong,
 ul {
   margin-top: 0;
   margin-bottom: 0;
@@ -506,21 +507,20 @@ body {
 
 /* Footer Form -------------------------------*/
 .footer-form {
-  margin-left: 80px;
-  display: flex;
-  align-items: flex-start;
+  margin-left: auto;
+
 }
 
 .footer-form-label {
   margin-bottom: 16px;
 }
 
-.footer-form-field {
+/* .footer-form-field {
   display: flex;
   flex-direction: column;
-}
+} */
 
-.footer-form-field .input {
+.footer-form .input {
   padding: 8px 16px;
   margin: 0;
 
@@ -534,7 +534,7 @@ body {
   color: var(--white-color);
 }
 
-.footer-form-field .input:is(:focus) {
+.footer-form .input:is(:focus) {
   outline: none;
   border-color: var(--sucsess-color);
 }
@@ -619,7 +619,6 @@ body {
   padding: 72px 24px 24px;
 
   min-width: 408px;
-  min-height: 576px;
 
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -640,7 +639,8 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--accent-color);
   cursor: pointer;
-  transition: background-color var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
+    fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .modal-button-close>.icon {
@@ -652,9 +652,11 @@ body {
 
 .modal-button-close:is(:hover, :focus) {
   background-color: var(--pressed-state-color);
+  fill: var(--white-color);
 }
 
 .modal-title {
+  display: block;
   margin-bottom: 16px;
 
   font-weight: 500;
@@ -665,13 +667,13 @@ body {
 }
 
 /* Modal Form-------------------------------- */
-.modal-form {
+/* .modal-form {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 
-  /* outline: 1px solid teal; */
-}
+  outline: 1px solid teal;
+} */
 
 .modal-form-field {
   position: relative;
